@@ -7,90 +7,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joel Anderson</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="style.css">
 </head> 
 
-<div class="header">
-    <div class="container">
+<div class="header__container">
+    <header>
         <h1>Joel Anderson</h1>
-    </div>
-    <div class="container">
-        <div class="navbar">
+    </header>
+    <nav>
             <ul>
-                <li>
-                    <a href="">
-                        Home
-                    </a>
-
-                </li>
-                <li>
-                    <a href="">
-                        About Me
-                    </a>
-
-                </li>
-                <li>
-                    <a href="">
-                        Gallery
-                    </a>
-
-                </li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#">Home</a></li>
             </ul>
-        </div>
-    </div>
-    <div class="container">
-        <div class="socials">
-            <ul>
-                <li>
-                    <a href="https://www.instagram.com/saskaperture/">
-                        <i class="uil uil-instagram">
-                        </i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/joel-anderson-ca/">
-                        <i class="uil uil-linkedin">
-                        </i>
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <button class="nav__toggle-btn" id="nav__toggle-open"><i class="uil uil-bars"></i></button>
+        <button class="nav__toggle-btn" id="nav__toggle-close"><i class="uil uil-multiply"></i></button>
+
+    </nav>
+    <div class="nav__socials">
+        <ul>
+            <li><a href="https://www.instagram.com/saskaperture/">
+                    <i class="uil uil-instagram">
+                    </i>
+                </a>
+            </li>
+            <li><a href="https://www.linkedin.com/in/joel-anderson-ca/">
+                    <i class="uil uil-linkedin">
+                    </i>
+                </a>
+            </li>
+        </ul>
+
     </div>
 </div>
 
-<div class="body">
-    <section id="about">
-        <div class="container aboutMe__container">
-            <div class="aboutMe_bio">
-                <h2>About Me</h2>
-                <p class="paragraph">
-                    text text text text text text text text text
-                    text text text text text text text text
-                    text text text text text text text text text
-                    text text text text text text text text
-                    text text text text text text text text text
-                    text text text text text text text text
-                    text text text text text text text text text
-                    text text text text text text text text
-                    text text text text text text text text text
-                </p>
-                <p class="paragraph">
-                    text text text text text text text text text
-                    text text text text text text text text text
-                    text text text text text text text text text
-                    text text text text text text text text text
-                    text text text text text text text text text
-                    text text text text text text text text text
-
-                </p>
+<body>
+        <section id="about">
+            <div class="container aboutMe__container">
+                <div class="aboutMe_bio">
+                    <h2>About Me</h2>
+                    <p class="paragraph">
+                        text text text text text text text text text
+                        text text text text text text text text
+                        text text text text text text text text text
+                        text text text text text text text text
+                        text text text text text text text text text
+                        text text text text text text text text
+                        text text text text text text text text text
+                        text text text text text text text text
+                        text text text text text text text text text
+                    </p>
+                    <p class="paragraph">
+                        text text text text text text text text text
+                        text text text text text text text text text
+                        text text text text text text text text text
+                        text text text text text text text text text
+                        text text text text text text text text text
+                        text text text text text text text text text
+    
+                    </p>
+                </div>
+                <div class="aboutMe__portrait">
+                    <img src="images/portrait.jpg" alt="about me portrait" height="400">
+                </div>
             </div>
-            <div class="aboutMe__portrait">
-                <img src="images/portrait.jpg" alt="about me portrait" height="400">
-            </div>
-        </div>
+        </section>
+    
+        <script src="./main.js"></script>
+</body>
 
 
-    </section>
 
-</div>

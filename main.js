@@ -8,37 +8,40 @@ window.addEventListener('scroll', () => {
 //Gallery images populated with ajax request
 var folder = "gallery";
 
-$.ajax({
-    url : folder,
+function loadGalleryImages () {
+  return $.ajax({
+    url: folder,
     success: function (data) {
-        $(data).find("a").attr("href", function (i, val) {
-            if( val.match(/.(jpe?g|png|gif)$/) ) { 
-                $("ul.image-gallery").append( "<li><img src='" + val +"'></li>" );
-            } 
-        });
+      $(data).find("a").attr("href", function (i, val) {
+        if (val.match(/.(jpe?g|png|gif)$/)) {
+          $("ul.image-gallery").append("<li><img src='" + val + "'></li>");
+        }
+      });
     }
-});
-
-//Modal Gallery previews
-
-var img = document.querySelectorAll(".image-gallery li img");
-var modal = document.getElementById("gallery-modal");
-var modalImg = document.getElementById("gallery-modal-img");
-var captionText = document.getElementById("gallery-modal-caption");
-
-img.forEach((imgA)=>{
-  imgA.onclick = function(){
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-  }
-});
-
-
-modal.onclick = function() {
-  modal.style.display = "none"
+  });
 }
 
+
+//Modal Gallery previews must be added only after ajax request completes
+loadGalleryImages().then(function () {
+  var img = document.querySelectorAll(".image-gallery li img");
+  var modal = document.getElementById("gallery-modal");
+  var modalImg = document.getElementById("gallery-modal-img");
+  var captionText = document.getElementById("gallery-modal-caption");
+
+  img.forEach((imgA) => {
+    imgA.onclick = function () {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+
+
+  modal.onclick = function() {
+    modal.style.display = "none"
+  }
+});
+  });
 
 //Hamburger menu for small screens
 if (window.innerWidth < 1024){

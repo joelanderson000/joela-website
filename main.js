@@ -1,14 +1,14 @@
 //scroll nav style
 window.addEventListener('scroll', () => {
-    document.querySelector('.header__container').classList.toggle('window-scrolled', window.scrollY > 0);
-    document.querySelector('header').classList.toggle('hide-content', window.scrollY > 0)
+  document.querySelector('.header__container').classList.toggle('window-scrolled', window.scrollY > 0);
+  document.querySelector('header').classList.toggle('hide-content', window.scrollY > 0)
 })
 
 
 //Gallery images populated with ajax request
 var folder = "gallery";
 
-function loadGalleryImages () {
+function loadGalleryImages() {
   return $.ajax({
     url: folder,
     success: function (data) {
@@ -37,14 +37,14 @@ loadGalleryImages().then(function () {
     }
 
 
-  modal.onclick = function() {
-    modal.style.display = "none"
-  }
-});
+    modal.onclick = function () {
+      modal.style.display = "none"
+    }
   });
+});
 
 //Hamburger menu for small screens
-if (window.innerWidth < 1024){
+if (window.innerWidth < 1024) {
 
 
   const nav = document.querySelector('.nav__links');

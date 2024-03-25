@@ -1,8 +1,8 @@
 //scroll nav style
-window.addEventListener('scroll', () => {
-  document.querySelector('.header__container').classList.toggle('window-scrolled', window.scrollY > 0);
-  document.querySelector('header').classList.toggle('hide-content', window.scrollY > 0)
-})
+// window.addEventListener('scroll', () => {
+//   document.querySelector('.header__container').classList.toggle('window-scrolled', window.scrollY > 0);
+//   document.querySelector('header').classList.toggle('hide-content', window.scrollY > 0)
+// })
 
 
 //Gallery images populated with ajax request

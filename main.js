@@ -5,6 +5,20 @@ window.addEventListener('scroll', () => {
 })
 
 
+//Gallery images populated with ajax request
+var folder = "gallery";
+
+$.ajax({
+    url : folder,
+    success: function (data) {
+        $(data).find("a").attr("href", function (i, val) {
+            if( val.match(/.(jpe?g|png|gif)$/) ) { 
+                $("ul.image-gallery").append( "<li><img src='" + val +"'></li>" );
+            } 
+        });
+    }
+});
+
 //Modal Gallery previews
 
 var img = document.querySelectorAll(".image-gallery li img");

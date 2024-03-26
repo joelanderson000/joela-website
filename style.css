@@ -18,6 +18,7 @@
 
 body {
     background: url(gallery/170322126.jpg), linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+    background: --webkit-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(gallery/170322126.jpg);
     background-blend-mode: overlay;
     background-attachment: fixed;
     scroll-behavior: smooth;

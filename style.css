@@ -226,6 +226,7 @@ img {
 
 .image-gallery > li {
     flex-grow: 0;
+    flex: 1 1 auto;
     height: 300px;
     cursor: pointer;
     position: relative;
@@ -238,7 +239,7 @@ img {
     vertical-align: middle;
     border-radius: 5px;
   }
-
+  
   .image-gallery::after {
     content: "";
     flex-grow: 999;

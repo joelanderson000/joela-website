@@ -1,6 +1,6 @@
 //scroll nav style
 window.addEventListener('scroll', () => {
-  document.querySelector('.header__container').classList.toggle('window-scrolled', window.scrollY > 0);
+  document.querySelector('.header__container').classList.toggle('bar-opacity', window.scrollY > 0);
   document.querySelector('header').classList.toggle('hide-content', window.scrollY > 0)
 })
 
@@ -43,32 +43,34 @@ loadGalleryImages().then(function () {
   });
 });
 
-//Hamburger menu for small screens
-if (window.innerWidth < 1024) {
 
-
-  const nav = document.querySelector('.nav__links');
+if (window.innerWidth <= 1024) {
+  const nav = document.querySelector('.nav__hamburger');
+  const header = document.querySelector('.header__container');
   const openNavBtn = document.querySelector('#nav__toggle-open');
   const closeNavBtn = document.querySelector('#nav__toggle-close');
 
   const openNav = () => {
+    console.info("pressed the burgggg")
     nav.style.display = 'flex';
     openNavBtn.style.display = 'none';
     closeNavBtn.style.display = 'inline-block';
+    header.classList.toggle('bar-opacity');
   }
 
   openNavBtn.addEventListener('click', openNav);
 
   const closeNav = () => {
+    console.info("pressed the x")
     nav.style.display = 'none';
     openNavBtn.style.display = 'inline-block';
     closeNavBtn.style.display = 'none';
+    header.classList.toggle('bar-opacity');
   }
 
   closeNavBtn.addEventListener('click', closeNav);
 
-  nav.querySelectorAll('li a').forEach(navLink => {
+  nav.querySelectorAll('div li a').forEach(navLink => {
     navLink.addEventListener('click', closeNav);
   });
-
 }

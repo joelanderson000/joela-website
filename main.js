@@ -27,13 +27,11 @@ loadGalleryImages().then(function () {
   var img = document.querySelectorAll(".image-gallery li img");
   var modal = document.getElementById("gallery-modal");
   var modalImg = document.getElementById("gallery-modal-img");
-  var captionText = document.getElementById("gallery-modal-caption");
 
   img.forEach((imgA) => {
     imgA.onclick = function () {
       modal.style.display = "block";
       modalImg.src = this.src;
-      captionText.innerHTML = this.alt;
     }
 
 

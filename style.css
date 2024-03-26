@@ -197,6 +197,13 @@ li a:hover {
     color: #111;
 }
 
+img {
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+
 
 .image-gallery img {
     transition: var(--transition)
@@ -338,6 +345,7 @@ footer {
     }
 
     .standaloneImage {
+        max-width: 90%;
         padding: 2rem;
     }
 

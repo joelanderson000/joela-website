@@ -55,7 +55,7 @@ if (window.innerWidth <= 1024) {
     nav.style.display = 'flex';
     openNavBtn.style.display = 'none';
     closeNavBtn.style.display = 'inline-block';
-    header.classList.toggle('bar-opacity');
+    header.classList.add('bar-opacity');
   }
 
   openNavBtn.addEventListener('click', openNav);
@@ -65,7 +65,9 @@ if (window.innerWidth <= 1024) {
     nav.style.display = 'none';
     openNavBtn.style.display = 'inline-block';
     closeNavBtn.style.display = 'none';
-    header.classList.toggle('bar-opacity');
+
+    if(window.scrollY === 0)
+    header.classList.remove('bar-opacity');
   }
 
   closeNavBtn.addEventListener('click', closeNav);

@@ -21,8 +21,10 @@ html {
     overflow-x: hidden;
 }
 body {
+    background: #000;
     background: url(gallery/170322126.jpg), linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8));
     background: --webkit-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(gallery/170322126.jpg);
+    background: --webkit-linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(gallery/170322126.jpg);
     background-blend-mode: overlay;
     background-attachment: fixed;
     scroll-behavior: smooth;

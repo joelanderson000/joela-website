@@ -16,6 +16,10 @@
     text-decoration: none;
 }
 
+html {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 body {
     background: url(gallery/170322126.jpg), linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8));
     background: --webkit-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(gallery/170322126.jpg);

@@ -31,15 +31,9 @@ html {
 }
 
 header {
-    margin: auto;
+    margin: 0;
     text-align: center;
     transition: var(--transition);
-}
-
-nav {
-    position: fixed;
-    left: 0;
-    top: 0;
 }
 
 .hide-content {
@@ -52,14 +46,16 @@ nav {
     display: flex;
     align-items: center;
     flex-direction: row;
+    justify-content: space-between;
     flex: 1;
     z-index: 1;
     background-color: rgba(0,0,0,0);
-    height: 30px;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    height: 35px;
     width: 100%;
     max-width: 100%;
 }
@@ -69,13 +65,8 @@ nav {
     content: "";
     background-color: rgba(0,0,0,1);
     transition: var(--transition);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     width: 100%;
-    height: 25px;
+    height: 35px;
 }
 
 .nav__container {
@@ -92,14 +83,7 @@ nav {
 .nav__hamburger {
     position: fixed;
     right: 0;
-    top: 0;
     display: none;
-}
-
-.nav__socials {
-    position: fixed;
-    right: 0;
-    top: 0;
 }
 
 .nav__toggle-btn {

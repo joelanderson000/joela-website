@@ -29,9 +29,9 @@ jobs:
       - name: HTML to be deployed
         run: cat public/index.html
       - name: Javascript to be deployed
-        run: cat public/index.html
+        run: cat public/main.js
       - name: CSS to be deployed
-        run: cat public/index.html
+        run: cat public/style.css
           
       - name: Deploying to Firebase
         uses: FirebaseExtended/action-hosting-deploy@v0

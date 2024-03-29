@@ -15,6 +15,9 @@ jobs:
 
       - name: Generate gallery images and deploy files
         uses: actions/setup-python@v5
+        with:
+          cache: 'pip'
+      - run: pip install beautifulsoup4
       - run: python build/build.py
 
       - name: Auto prefix and minify css and js

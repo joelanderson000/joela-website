@@ -10,8 +10,21 @@ jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Generate gallery images and deploy files
+        uses: actions/setup-python@v5
+      - run: python build/build.py
+
+      - name: Auto prefix and minify css and js
+        uses: nizarmah/auto-minify@v3
+        with:
+          overwrite: true
+          directory: 'public'
+          
+      - name: Deploying to Firebase
+        uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_JOELA_B14A9 }}'

@@ -8,38 +8,25 @@ window.addEventListener('scroll', () => {
 //Gallery images populated with ajax request
 var folder = "gallery";
 
-function loadGalleryImages() {
-  return $.ajax({
-    url: folder,
-    success: function (data) {
-      $(data).find("a").attr("href", function (i, val) {
-        if (val.match(/.(jpe?g|png|gif)$/)) {
-          $("ul.image-gallery").append("<li><img src='" + val + "'></li>");
-        }
-      });
-    }
-  });
-}
 
 
-//Modal Gallery previews must be added only after ajax request completes
-loadGalleryImages().then(function () {
-  var img = document.querySelectorAll(".image-gallery li img");
-  var modal = document.getElementById("gallery-modal");
-  var modalImg = document.getElementById("gallery-modal-img");
+//Modal Gallery previews
+var img = document.querySelectorAll(".image-gallery li img");
+var modal = document.getElementById("gallery-modal");
+var modalImg = document.getElementById("gallery-modal-img");
 
-  img.forEach((imgA) => {
-    imgA.onclick = function () {
-      modal.style.display = "block";
-      modalImg.src = this.src;
-    }
+img.forEach((imgA) => {
+  imgA.onclick = function () {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+  }
 
 
-    modal.onclick = function () {
-      modal.style.display = "none"
-    }
-  });
+  modal.onclick = function () {
+    modal.style.display = "none"
+  }
 });
+
 
 
 if (window.innerWidth <= 1024) {

@@ -206,7 +206,7 @@ img {
 /* GALLERY BLOCK  */
 .image-gallery {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;

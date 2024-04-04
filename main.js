@@ -20,7 +20,7 @@ img.forEach((imgA) => {
     var base_url = window.location.origin;
     imageUrl = base_url.concat("/",fullResImages,imageName);
     modalImg.src = imageUrl;
-    console.info(imageUrl)
+    console.info(imageUrl);
   }
 
 

@@ -15,16 +15,20 @@ var modalImg = document.getElementById("gallery-modal-img");
 
 img.forEach((imgA) => {
   imgA.onclick = function () {
+    modal.style.display = "block";
     imageName = this.src.split("/").slice(-1);
     var base_url = window.location.origin;
     imageUrl = base_url.concat("/",fullResImages,imageName);
-    modalImg.src = imageUrl;
-    modal.style.display = "block";
+    fetch(imageUrl).then( response => { //Stop trying to make fetch happen >_>
+      modalImg.src = imageUrl;
+      modalImg.style.display = "block"
+    })
   }
 
 
   modal.onclick = function () {
     modal.style.display = "none"
+    modalImg.style.display = "none"
   }
 });
 

@@ -242,6 +242,7 @@ img {
   }
 
   .gallery-modal-content{
+    display: none;
     padding-top:80px;
     margin: auto;
     display: block;

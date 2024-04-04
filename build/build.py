@@ -7,6 +7,7 @@ javascript = 'main.js'
 css = 'style.css'
 
 gallery = 'gallery/'
+fullRes = 'fullResGallery/'
 deployDir = 'public/'
 
 
@@ -18,7 +19,7 @@ def generateGalleryImageTags(indexFile, galleryFilePath):
         galleryElement = soup.find(class_='image-gallery')
         for image in listdir(deployDir + galleryFilePath):
             listElement = soup.new_tag('li')
-            imageElement = soup.new_tag('img', src=galleryFilePath + image)
+            imageElement = soup.new_tag('img', src=galleryFilePath + image, loading='lazy')
             listElement.append(imageElement)
             galleryElement.append(listElement)
 

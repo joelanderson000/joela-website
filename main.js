@@ -6,9 +6,7 @@ window.addEventListener('scroll', () => {
 
 
 //Gallery images populated with ajax request
-var folder = "gallery";
-
-
+var fullResImages = "fullResGallery/";
 
 //Modal Gallery previews
 var img = document.querySelectorAll(".image-gallery li img");
@@ -18,7 +16,11 @@ var modalImg = document.getElementById("gallery-modal-img");
 img.forEach((imgA) => {
   imgA.onclick = function () {
     modal.style.display = "block";
-    modalImg.src = this.src;
+    imageName = this.src.split("/").slice(-1);
+    var base_url = window.location.origin;
+    imageUrl = base_url.concat("/",fullResImages,imageName);
+    modalImg.src = imageUrl;
+    console.info(imageUrl)
   }
 
 

@@ -11,7 +11,6 @@ fullRes = 'fullResGallery/'
 deployDir = 'public/'
 
 
-
 def generateGalleryImageTags(indexFile, galleryFilePath):
     with open(indexFile, 'r') as file:
         htmlFile = file.read()
@@ -27,18 +26,10 @@ def generateGalleryImageTags(indexFile, galleryFilePath):
             newFile.write(soup.prettify())
         
 
-
 def copyFiles():
     shutil.copy(javascript, deployDir)
     shutil.copy(css, deployDir)
             
-
-    
-
-
-
-
-
 
 generateGalleryImageTags(index, gallery)
 copyFiles()

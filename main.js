@@ -19,7 +19,7 @@ img.forEach((imgA) => {
     imageName = this.src.split("/").slice(-1);
     var base_url = window.location.origin;
     imageUrl = base_url.concat("/",fullResImages,imageName);
-    fetch(imageUrl).then( response => { //Stop trying to make fetch happen >_>
+    fetch(imageUrl).then( function () { //Stop trying to make fetch happen >_>
       modalImg.src = imageUrl;
       modalImg.style.display = "block"
     })

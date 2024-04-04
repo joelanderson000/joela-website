@@ -15,12 +15,11 @@ var modalImg = document.getElementById("gallery-modal-img");
 
 img.forEach((imgA) => {
   imgA.onclick = function () {
-    modal.style.display = "block";
     imageName = this.src.split("/").slice(-1);
     var base_url = window.location.origin;
     imageUrl = base_url.concat("/",fullResImages,imageName);
     modalImg.src = imageUrl;
-    console.info(imageUrl)
+    modal.style.display = "block";
   }
 
 

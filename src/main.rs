@@ -2,6 +2,7 @@ mod about;
 mod gallery;
 mod welcome;
 mod app;
+mod images;
 
 use yew::prelude::*;
 

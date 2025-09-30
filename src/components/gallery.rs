@@ -1,6 +1,7 @@
 use yew::prelude::*;
 use yew::Properties;
-use crate::{gallery, images};
+use crate::components::gallery;
+use crate::assets::images;
 
 #[function_component(ImageEntry)]
 fn image_list(images::ImageListProps { images }: &images::ImageListProps) -> Html {

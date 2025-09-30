@@ -1,19 +1,22 @@
-mod about;
-mod gallery;
-mod welcome;
-mod app;
-mod images;
-
 use yew::prelude::*;
 
+mod components;
+mod assets;
+mod app;
+
+use crate::components::{
+    about::About,
+    gallery::Gallery,
+    welcome::Welcome,
+};
 #[function_component(App)]
 fn app() -> Html {
     html! {
         <>
             <app::Nav />
-            <welcome::Welcome />
-            <about::About />
-            <gallery::Gallery />
+            <Welcome />
+            <About />
+            <Gallery />
             <app::Footer />
         </>
     }

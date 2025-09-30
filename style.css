@@ -476,3 +476,8 @@ footer {
         position: relative;
       }
 }
+
+svg {
+    display: flex;
+    gap: 0.2rem;
+}

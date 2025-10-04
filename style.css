@@ -154,7 +154,6 @@ h3 {
 }
 
 ul {
-
     list-style-type: none;
     padding: auto;
     overflow: hidden;
@@ -170,8 +169,17 @@ li a {
     color: var(--text-color-1);
     background: transparent;
     text-align: center;
-    padding: 2px 10px;
+    padding: 2px 5px;
     text-decoration: none;
+    transition: var(--transition)
+}
+
+svg {
+    max-height: 20px;
+    max-width: 20px;
+    height: auto;
+    padding: 2px 10px;
+    width: auto;
     transition: var(--transition)
 }
 
@@ -179,12 +187,19 @@ li a:hover {
     color: #111;
 }
 
+svg:hover {
+    fill: #111;
+}
+
+
 img {
     max-height: 100%;
     max-width: 100%;
     height: auto;
     width: auto;
 }
+
+
 
 
 .image-gallery img {

@@ -9,11 +9,12 @@ use crate::components::{
     gallery::Gallery,
     welcome::Welcome,
 };
-#[function_component(App)]
-fn app() -> Html {
+#[function_component]
+fn App() -> Html {
     html! {
         <>
-            <app::Nav />
+            <app::Header />
+            // <app::Nav />
             <Welcome />
             <About />
             <Gallery />

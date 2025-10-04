@@ -1,7 +1,10 @@
 use yew::prelude::*;
 
-use crate::components::{socials::Socials};
-
+use crate::components::{
+    links::Socials,
+    links::NavLinks,
+    links::ContactLink
+};
 
 #[function_component]
 pub fn Header() -> Html {
@@ -24,9 +27,7 @@ pub fn Nav() -> Html {
     html! {
                 <nav>
                     <ul class={classes!("nav__links")}>
-                        <li><a href="#gallery">{"Gallery"}</a></li>
-                        <li><a href="#about">{"About Me"}</a></li>
-                        <li><a href="#">{"Home"}</a></li>
+                        <NavLinks />
                     </ul>
                 </nav>
     }
@@ -53,9 +54,7 @@ pub fn Hamburger() -> Html {
         <>
                 <div class={classes!("nav__hamburger")}>
                     <ul>
-                        <li><a href="#gallery">{"Gallery"}</a></li>
-                        <li><a href="#about">{"About Me"}</a></li>
-                        <li><a href="#">{"Home"}</a></li>
+                        <NavLinks />
                         <li>
                             <ul>
                                 <Socials />
@@ -71,10 +70,8 @@ pub fn Hamburger() -> Html {
 fn FooterLinks() -> Html {
     html! {
         <ul class={classes!("footer__links")}>
-            <li><a href="#">{"Home"}</a></li>
-            <li><a href="#about">{"About"}</a></li>
-            <li><a href="#gallery">{"Gallery"}</a></li>
-            <li><a href="mailto:contact@joela.ca">{"Contact Me"}</a></li>
+            <NavLinks />
+            <ContactLink />
         </ul>
     }
 }
@@ -83,7 +80,7 @@ fn FooterLinks() -> Html {
 fn Copyright() -> Html {
     html! {
             <div class={classes!("footer__copyright")}>
-                <h3>{"© Joel Anderson 2024"}</h3>
+                <h3>{"© Joel Anderson 2025"}</h3>
             </div>
     }
 }

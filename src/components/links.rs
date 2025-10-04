@@ -30,3 +30,25 @@ pub fn Socials() -> Html {
         }
 
 }
+
+#[function_component]
+pub fn NavLinks() -> Html {
+    html! {
+        <>
+            <li><a href="#gallery">{"Gallery"}</a></li>
+            <li><a href="#about">{"About Me"}</a></li>
+            <li><a href="#">{"Home"}</a></li>
+        </>
+    }
+}
+
+
+
+#[function_component]
+pub fn ContactLink() -> Html {
+    html! {
+        <>
+            <li><a href="mailto:contact@joela.ca">{"Contact Me"}</a></li>
+        </>
+    }
+}

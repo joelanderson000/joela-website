@@ -4,19 +4,25 @@ use crate::components::gallery;
 use crate::assets::images;
 
 #[function_component]
-fn ImageEntry(images::ImageListProps { images }: &images::ImageListProps) -> Html {
+fn ImageCards(images::ImageListProps { images }: &images::ImageListProps) -> Html {
     images.iter().map(|image| html! {
-        <li><img src={image.src.clone()} loading={image.loading.clone()}/></li>
+        <div class={classes!("flex", "size-80", "bg-white", "justify-center", "items-center", "rounded-lg", "shadow-md", "hover:shadow-xl", "transition-shadow", "duration-300", "ease-in-out")}>
+            <img src={image.src.clone()} loading={image.loading.clone()} class={classes!("object-scale-down", "max-h-80", "p-3")}/>
+        </div>
     }).collect()
 }
+
 #[function_component]
 pub fn Gallery() -> Html {
     html! {
         <section id="gallery">
-            <div class={classes!("container", "gallery__container")}>
+            <div class={classes!("max-w-fit", "content-center", "p-14")}>
                 <GalleryModal />
                 <h2>{"Gallery"}</h2>
-                <gallery::ImageList />
+                <div class={classes!("image-gallery", "flex", "flex-wrap", "gap-4")}>
+                    <gallery::ImageList />
+                </div>
+
             </div>
         </section>
     }
@@ -34,8 +40,8 @@ pub fn GalleryModal() -> Html {
 pub fn ImageList() -> Html {
     let images = images::get_images();
     html! {
-        <ul class={classes!("image-gallery")}>
-            <ImageEntry images={images} />
-        </ul>
+        <div class={classes!("image-gallery", "flex", "flex-wrap", "gap-4")}>
+            <ImageCards images={images} />
+        </div>
     }
 }

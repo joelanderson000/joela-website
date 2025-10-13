@@ -4,7 +4,7 @@ use yew::prelude::*;
 pub fn About() -> Html {
     html! {
             <section id="about">
-                <div class={classes!("container", "aboutMe__container")}>
+                <div class={classes!("flex-row", "gap-8", "justify-center", "align-center", "items-center", "p-14")}>
                     <AboutBio />
                     <AboutImage />
                 </div>
@@ -15,7 +15,7 @@ pub fn About() -> Html {
 #[function_component]
 pub fn AboutBio() -> Html {
     html! {
-        <div class={classes!("aboutMe_bio")}>
+        <div class={classes!("max-w-2xl", "mx-auto", "flex", "flex-col", "items-center")}>
             <h2>{"Joel Anderson – Engineer, Photographer, Technology Enthusiast"}</h2>
                 <p class={classes!("paragraph")}>
                     {"Welcome! I'm Joel Anderson. With a background in electrical engineering and computer science, I love the creative outlet that photography gives me."}
@@ -35,7 +35,7 @@ pub fn AboutBio() -> Html {
 #[function_component]
 pub fn AboutImage() -> Html {
     html! {
-        <div class={classes!("standaloneImage")}>
+        <div class={classes!("items-center")}>
             <img src="images/portrait.jpg" alt="about me portrait" height="400" />
         </div>
     }

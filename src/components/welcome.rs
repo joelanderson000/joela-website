@@ -13,7 +13,7 @@ use crate::assets::styles::tailwind;
 #[function_component]
 pub fn Welcome() -> Html {
     html! {
-        <section id="welcome" class={String::from("flex flex-col items-center justify-center h-screen text-center p-4")}>
+        <section id="welcome" class={String::from("flex flex-col items-center justify-center h-screen text-center p-4 break-after")}>
             <h2>{"Creativity and Technology"}</h2>
         </section>
     }

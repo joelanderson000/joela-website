@@ -14,8 +14,8 @@ fn ImageCards(images::ImageListProps { images }: &images::ImageListProps) -> Htm
 #[function_component]
 pub fn Gallery() -> Html {
     html! {
-        <section id="gallery">
-            <div class={classes!("max-w-fit", "content-center", "p-14")}>
+        <section id="gallery" class={classes!(String::from("break-after"))}>
+            <div class={classes!(String::from("max-w-fit content-center p-14"))}>
                 <GalleryModal />
                 <h2>{"Gallery"}</h2>
                 <div class={classes!("flex", "flex-grow")}>

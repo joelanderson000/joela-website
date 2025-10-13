@@ -11,14 +11,8 @@ use crate::components::{
 };
 #[function_component]
 fn App() -> Html {
-    let style: Vec<&str> = vec![
-        "font-sans",
-        "text-gray-800",
-        "bg-slate-200",
-        "min-h-screen",
-    ];
     html! {
-        <div class={classes!(style)}>
+        <div class={classes!(String::from("flex flex-col font-sans text-gray-800 bg-slate-200 min-h-screen"))}>
             <app::Header />
             // <app::Nav />
             <Welcome />

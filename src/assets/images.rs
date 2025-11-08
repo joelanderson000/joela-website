@@ -1,4 +1,4 @@
-use yew::Properties;
+use yew::{Callback, Properties};
 
 #[derive(Clone, PartialEq)]
 pub struct Image {
@@ -9,6 +9,7 @@ pub struct Image {
 #[derive(Properties, PartialEq)]
 pub struct ImageListProps {
     pub images: Vec<Image>,
+    on_click: Callback<Image>,
 }
 
 pub fn get_images() -> Vec<Image> {
